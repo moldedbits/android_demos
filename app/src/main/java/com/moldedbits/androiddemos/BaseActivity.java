@@ -70,14 +70,23 @@ public class BaseActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
+    /**
+     * Add any new activities here
+     * @param item
+     * @return
+     */
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.timber) {
-            startActivity(new Intent(this, TimberDemoActivity.class));
+        switch (id) {
+            case R.id.timber:
+                startActivity(new Intent(this, TimberDemoActivity.class));
+                break;
+            default:
+                break;
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

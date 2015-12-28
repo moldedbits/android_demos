@@ -7,4 +7,5 @@
     <string name="library_demos">Library Demos</string>
     <string name="timber" translatable="false">Timber</string>
     <string name="title_activity_timber_demo">TimberDemoActivity</string>
+    <string name="debug_log">Debug Log</string>
 </resources>
