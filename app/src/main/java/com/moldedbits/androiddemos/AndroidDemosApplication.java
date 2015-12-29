@@ -3,6 +3,7 @@ package com.moldedbits.androiddemos;
 import android.app.Application;
 
 import com.moldedbits.androiddemos.library_demos.timber.CrashlyticsTree;
+import com.moldedbits.androiddemos.library_demos.timber.LineNoDebugTree;
 
 import timber.log.Timber;
 
@@ -27,11 +28,6 @@ public class AndroidDemosApplication extends Application {
         // reporting mechanism. This can also be done conditionally for release builds only.
         Timber.plant(new CrashlyticsTree());
 
-        Timber.plant(new Timber.DebugTree() {
-            @Override
-            protected String createStackElementTag(StackTraceElement element) {
-                return super.createStackElementTag(element) + ":" + element.getLineNumber();
-            }
-        });
+        Timber.plant(new LineNoDebugTree());
     }
 }

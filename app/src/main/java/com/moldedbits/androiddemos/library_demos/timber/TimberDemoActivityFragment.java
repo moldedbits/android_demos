@@ -25,13 +25,14 @@ public class TimberDemoActivityFragment extends Fragment {
     @OnClick(R.id.btn_log_timber)
     public void logTimber() {
         Timber.d("This is a debug log");
-        Timber.e("This is a error log with formatting: %s", "DEMO ERROR");
-        Timber.i(new IllegalArgumentException(), "Logging an exception with string formatting #%d", 1);
+        Timber.i("This is an info log with formatting: %s", "DEMO ERROR");
+        Timber.e(new IllegalArgumentException(), "Logging an exception with string formatting #%d", 1);
+        Timber.wtf("What the... !!");
 
         // Lint should show following warning for above case
         // Warning: Replace String concatenation with Timber's string formatting [BinaryOperationInTimber]
         String someString = "Concatenation in timber";
-        Timber.v(someString + " Lint will complain about this " + 1);
+        Timber.v(someString + " Lint will complain about this at some point of time " + 1);
 
         // Using custom TAG timber by default uses filename as TAG
         Timber.tag("CustomTag").d("Debug log with custom tag");

@@ -25,10 +25,12 @@ public class CrashlyticsTree extends Timber.Tree {
 //        Crashlytics.setString(CRASHLYTICS_KEY_TAG, tag);
 //        Crashlytics.setString(CRASHLYTICS_KEY_MESSAGE, message);
 //
-//        if (t == null) {
+        if (t == null) {
+            Log.e("CRASHLYTICS", message);
 //            Crashlytics.logException(new Exception(message));
-//        } else {
+        } else {
+            Log.e("CRASHLYTICS", message);
 //            Crashlytics.logException(t);
-//        }
+        }
     }
 }
