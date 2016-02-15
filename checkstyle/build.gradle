@@ -1,17 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'checkstyle'
-
-checkstyle {
-    toolVersion = '6.14.1'
-}
-
-task checkstyle(type: Checkstyle) {
-    source 'src'
-    include '**/*.java'
-    exclude '**/gen/**'
-    // empty classpath
-    classpath = files()
-}
+apply plugin: 'com.noveogroup.android.check'
 
 android {
     compileSdkVersion 23
@@ -36,4 +24,28 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.1'
+
+    // Butterknife - for View Injections
+    // Homepage http://jakewharton.github.io/butterknife/
+    compile 'com.jakewharton:butterknife:7.0.1'
+}
+
+check {
+    abortOnError false
+
+    checkstyle {
+        abortOnError false
+        report new File(project.buildDir, 'reports/checkstyle')
+    }
+
+    findbugs {
+        abortOnError false
+        config hard()
+        report new File(project.buildDir, 'reports/findbugs')
+    }
+
+    pmd {
+        abortOnError false
+        report new File(project.buildDir, 'reports/pmd')
+    }
 }
