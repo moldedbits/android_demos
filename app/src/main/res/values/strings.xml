@@ -3,6 +3,10 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
     <string name="action_settings">Settings</string>
+    <string name="library_demos">Library Demos</string>
+    <string name="timber" translatable="false">Timber</string>
+    <string name="title_activity_timber_demo">TimberDemoActivity</string>
+    <string name="debug_log">Debug Log</string>
+    <string name="print_some_logs">Print Some Logs</string>
 </resources>
