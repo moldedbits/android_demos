@@ -1,5 +1,7 @@
 package com.moldedbits.androiddemos.library_demos.loader.api;
 
+import com.moldedbits.androiddemos.BuildConfig;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -17,7 +19,7 @@ public class ApiProvider {
 
     private static void initApi() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://jsonview.com")
+                .baseUrl(BuildConfig.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

@@ -11,10 +11,24 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
+    final BASE_URL_DEBUG = "http://jsonview.com";
+    final BASE_URL_RELEASE = "http://jsonview.com";
+    final BASE_URL_PROD = "http://jsonview.com";
+
     buildTypes {
+        debug {
+            buildConfigField 'String', 'BASE_URL', "\"" + BASE_URL_DEBUG + "\""
+        }
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'BASE_URL', "\"" + BASE_URL_RELEASE + "\""
+        }
+        production {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'BASE_URL', "\"" + BASE_URL_PROD + "\""
         }
     }
 }
