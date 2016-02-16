@@ -9,4 +9,7 @@
     <string name="title_activity_timber_demo">TimberDemoActivity</string>
     <string name="debug_log">Debug Log</string>
     <string name="print_some_logs">Print Some Logs</string>
+    <string name="refresh">Refresh</string>
+    <string name="without_loader">Without Loader</string>
+    <string name="with_loader">With Loader</string>
 </resources>

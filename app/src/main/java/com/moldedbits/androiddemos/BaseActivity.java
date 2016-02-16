@@ -14,7 +14,7 @@ import android.widget.FrameLayout;
 
 import com.moldedbits.androiddemos.library_demos.timber.TimberDemoActivity;
 
-public class BaseActivity extends AppCompatActivity
+public abstract class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private FrameLayout mContainer;
