@@ -31,6 +31,36 @@
         <activity android:name=".library_demos.loader.LoaderActivity"/>
 
         <activity android:name=".library_demos.loader.NoLoaderActivity"/>
+
+        <!-- for facebook sromku library -->
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+
+        <provider
+            android:name="com.facebook.FacebookContentProvider"
+            android:authorities="com.facebook.app.FacebookContentProvider194881837524606"
+            android:exported="true" />
+
+        <activity
+            android:name=".sromku_facebook_integration.Detail"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_activity_timber_demo"></activity>
+
+        <activity android:name=".sromku_facebook_integration.FacebookLoginActivity"
+            android:label="@string/title_activity_timber_demo"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+
+        <!-- end -->
     </application>
 
 </manifest>
