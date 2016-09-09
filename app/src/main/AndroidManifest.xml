@@ -28,6 +28,10 @@
 
         <activity android:name=".library_demos.loader.LoaderDemoMainActivity"/>
 
+
+        <activity android:name=".toolbox_demo.CustomWidgetActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity android:name=".library_demos.loader.LoaderActivity"/>
 
         <activity android:name=".library_demos.loader.NoLoaderActivity"/>

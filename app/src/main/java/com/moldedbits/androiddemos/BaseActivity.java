@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.FrameLayout;
 
 import com.moldedbits.androiddemos.library_demos.timber.TimberDemoActivity;
+import com.moldedbits.androiddemos.toolbox_demo.CustomWidgetActivity;
 
 public abstract class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -84,6 +85,9 @@ public abstract class BaseActivity extends AppCompatActivity
         switch (id) {
             case R.id.timber:
                 startActivity(new Intent(this, TimberDemoActivity.class));
+                break;
+            case R.id.toolbox:
+                startActivity(new Intent(this, CustomWidgetActivity.class));
                 break;
             default:
                 break;

@@ -6,6 +6,10 @@
                 android:id="@+id/timber"
                 android:icon="@drawable/ic_menu_share"
                 android:title="@string/timber"/>
+            <item
+                android:id="@+id/toolbox"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/widget"/>
         </menu>
     </item>
 

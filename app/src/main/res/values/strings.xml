@@ -12,4 +12,6 @@
     <string name="refresh">Refresh</string>
     <string name="without_loader">Without Loader</string>
     <string name="with_loader">With Loader</string>
+    <string name="widget">Widget</string>
+    <string name="show_picker">SHOW PICKER</string>
 </resources>

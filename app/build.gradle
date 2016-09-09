@@ -54,4 +54,5 @@ dependencies {
     // Homepage http://square.github.io/retrofit/
     compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile project(path: ':toolbox')
 }
